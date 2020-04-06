@@ -3,7 +3,13 @@ import City from './city';
 
 class CityList extends Component {
   render() {
-    return <City />
+    return(
+      <div className="cities">
+        {this.props.cities.map((city) => {
+          return <City key={city.name} city={city} />;
+        })}
+      </div>
+    )
   };
 };
 
