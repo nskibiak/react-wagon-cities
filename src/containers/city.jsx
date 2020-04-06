@@ -9,10 +9,10 @@ class City extends Component {
   render() {
 
     const city = this.props.city;
-    const selectedFlat = this.props.selectedFlat;
+    const selectedCity = this.props.selectedCity;
 
     return (
-      <div className="list-group-item" onClick={(event) => {this.handleClick({city})}}>{city.name}</div>
+      <div className={(city === selectedCity) ? "list-group-item selected" : "list-group-item" } onClick={(event) => {this.handleClick({city})}}>{city.name}</div>
     )
   }
 };

@@ -8,7 +8,7 @@ class CityList extends Component {
     return(
       <div className="cities">
         {this.props.cities.map((city) => {
-          return <City key={city.name} city={city} pickCity={this.props.pickCity} />;
+          return <City key={city.name} city={city} pickCity={this.props.pickCity} selectedCity={this.props.selectedCity}/>;
         })}
       </div>
     )
