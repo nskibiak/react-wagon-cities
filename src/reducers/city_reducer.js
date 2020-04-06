@@ -9,13 +9,6 @@ const cityReducer = (state, action) => {
     return state;
   }
 
-  // USUAL WAY OF HANDLING ACTION
-  // switch(action.type) {
-  //   case 'SET_FLATS':
-  //     return action.payload;
-  //   default:
-  //     return state;
-  // }
 }
 
 export default cityReducer;
