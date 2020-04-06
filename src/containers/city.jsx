@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 
 class City extends Component {
 
-  handleClick = () => {
-    console.log("it's working");
+  handleClick = (city) => {
+    this.props.pickCity(city);
   }
 
   render() {
+
+    const city = this.props.city;
+    const selectedFlat = this.props.selectedFlat;
+
     return (
-      <div className="list-group-item" onClick={this.handleClick}>{this.props.city.name}</div>
+      <div className="list-group-item" onClick={(event) => {this.handleClick({city})}}>{city.name}</div>
     )
   }
 };
