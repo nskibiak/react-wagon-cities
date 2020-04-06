@@ -8,7 +8,7 @@ class ActiveCity extends Component {
       <div className="active-city">
         <h3>{this.props.city.name}</h3>
         <p>{this.props.city.address}</p>
-        <img src={image} alt=""/>
+        <img className="active-city-image" src={image} alt=""/>
       </div>
     )
   };

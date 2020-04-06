@@ -4,14 +4,20 @@
   display: flex;
   .cities {
     width: 30%;
+    margin: none;
+    padding: none;
   }
   .active-city {
+    height: 93vh;
     width: 70%;
     margin-left: 20px;
     margin-bottom: 20px;
     padding: 10px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    .active-city-image {
+    width: 100%;
+    }
     h3 {
       margin-top: 0;
     }
@@ -21,4 +27,11 @@
 .list-group-item {
   background-color: transparent;
   cursor: pointer;
+  border: 1px solid #ddd;
+  list-style-type: none;
+  padding: 10px;
+}
+.list-group-item:hover {
+  border: 1px solid yellow;
+  box-shadow: 0px 0px 0px 1px yellow;
 }
