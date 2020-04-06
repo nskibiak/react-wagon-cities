@@ -2,11 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.scss';
 import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
 import * as serviceWorker from './serviceWorker';
+
+import cityReducer from './reducers/city_reducer';
+
 import App from './components/app';
 
+const reducers = combineReducers({
+  city: cityReducer
+})
+
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={createStore(reducers)}>
     <App />
   </Provider>,
   document.getElementById('root')

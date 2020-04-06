@@ -4,28 +4,39 @@ import CityList from '../containers/city_list';
 import cities from '../data/cities';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selectedCity: cities[0]
-    };
-  }
-
-  pickCity = (city) => {
-    this.setState({
-      selectedCity: city.city
-    });
-  }
-
   render() {
     return (
       <div className="app">
-        <CityList cities={cities} pickCity={this.pickCity} selectedCity={this.state.selectedCity}/>
-        <ActiveCity city={this.state.selectedCity} />
+        <CityList cities={cities} />
+        <ActiveCity />
       </div>
     );
   }
 }
+
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       selectedCity: cities[0]
+//     };
+//   }
+
+//   pickCity = (city) => {
+//     this.setState({
+//       selectedCity: city.city
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <div className="app">
+//         <CityList cities={cities} pickCity={this.pickCity} selectedCity={this.state.selectedCity}/>
+//         <ActiveCity city={this.state.selectedCity} />
+//       </div>
+//     );
+//   }
+// }
 
 export default App;

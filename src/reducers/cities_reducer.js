@@ -1,9 +1,9 @@
-const cityReducer = (state, action) => {
+const citiesReducer = (state, action) => {
   if (state === undefined) {
     return [];
   }
 
-  if (action.type === 'PICK_CITY') {
+  if (action.type === 'LIST_CITIES') {
     return action.payload;
   } else {
     return state;
@@ -11,4 +11,4 @@ const cityReducer = (state, action) => {
 
 }
 
-export default cityReducer;
+export default citiesReducer;
