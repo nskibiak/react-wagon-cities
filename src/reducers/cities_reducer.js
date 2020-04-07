@@ -1,4 +1,4 @@
-const citiesReducer = (state, action) => {
+const CitiesReducer = (state, action) => {
   if (state === undefined) {
     return [];
   }
@@ -11,4 +11,4 @@ const citiesReducer = (state, action) => {
 
 }
 
-export default citiesReducer;
+export default CitiesReducer;

@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+
 import { selectCity } from '../actions'
+
+// const City = (props) => {
+//   return (
+//     <li
+//       className="list-group-item"
+//       onClick={() => props.selectCity(props.city)}
+//     >{props.city.name}</li>
+//   );
+// };
 
 class City extends Component {
 
-  handleClick = () => {
-    this.props.selectCity(this.props.city);
-  }
+  // handleClick = (props) => {
+  //   selectCity(props.city);
+  // }
 
   render() {
 
@@ -21,7 +31,7 @@ class City extends Component {
     return (
       <div
         className={classes}
-        onClick={(event) => {this.handleClick({city})}}
+        onClick={() => this.props.selectCity(city)}
       >
         {city.name}
       </div>

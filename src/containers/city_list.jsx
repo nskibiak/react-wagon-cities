@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import City from './city';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { listCities } from '../actions';
+
+import City from '../containers/city';
 
 class CityList extends Component {
 

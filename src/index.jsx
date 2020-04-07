@@ -5,14 +5,14 @@ import { createStore, combineReducers } from 'redux';
 // import * as serviceWorker from './serviceWorker';
 import './stylesheets/index.scss';
 
-import citiesReducer from './reducers/cities_reducer';
-import selectedCityReducer from './reducers/selected_city_reducer';
+import CitiesReducer from './reducers/cities_reducer';
+import SelectedCityReducer from './reducers/selected_city_reducer';
 
 import App from './components/app';
 
 const reducers = combineReducers({
-  cities: citiesReducer,
-  city: selectedCityReducer
+  cities: CitiesReducer,
+  selectedCity: SelectedCityReducer
 })
 
 ReactDOM.render(

@@ -1,4 +1,4 @@
-const selectedCityReducer = (state, action) => {
+const SelectedCityReducer = (state, action) => {
   if (state === undefined) {
     return null;
   }
@@ -11,4 +11,4 @@ const selectedCityReducer = (state, action) => {
 
 }
 
-export default selectedCityReducer;
+export default SelectedCityReducer;
