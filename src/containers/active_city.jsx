@@ -6,7 +6,7 @@ const ActiveCity = (props) => {
   if (!props.selectedCity) {
     return (
       <div className="active-city">
-        <p>Select a city...</p>
+        <p>Please click on a city...</p>
       </div>
     );
   }
